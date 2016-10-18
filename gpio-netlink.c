@@ -47,7 +47,7 @@ module_param(pin, int, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
 module_param(pid, int, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
 module_param(nlgroup, int, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
 module_param(irqf, int, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
-MODULE_PARM_DESC(debug, "debug (default=" STR(DEFAULT_DEBUG) "; 1 enables debugging)");
+MODULE_PARM_DESC(debug, "debug flag (default=" STR(DEFAULT_DEBUG) "; 1 enables debugging)");
 MODULE_PARM_DESC(pin, "gpio pin number (default=" STR(DEFAULT_PIN) ")");
 MODULE_PARM_DESC(pid, "process id for netlink unicast (default=" STR(DEFAULT_PID) "; -1 enables multicast)");
 MODULE_PARM_DESC(nlgroup, "netlink group (default=" STR(DEFAULT_NLGROUP) ")");
