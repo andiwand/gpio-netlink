@@ -1,3 +1,6 @@
+// TODO: receive commands per netlink to register irq
+// TODO: parameter to add multiple pins
+
 #include <linux/module.h>
 #include <linux/moduleparam.h>
 #include <linux/kernel.h>
