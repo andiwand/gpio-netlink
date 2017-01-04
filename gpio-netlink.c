@@ -1,5 +1,6 @@
 // TODO: receive commands per netlink to register irq
 // TODO: parameter to add multiple pins
+// TODO: netlink packet sometimes filled with zeros
 
 #include <linux/module.h>
 #include <linux/moduleparam.h>
@@ -67,7 +68,7 @@ static irqreturn_t irq_handler(int irq, void *dev_id, struct pt_regs *regs) {
     
     nlsock_send(&msg, sizeof(msg));
     if (debug) {
-        printk(KERN_NOTICE "interrupt pin=%d value=%d time=%ld.%ld\n", msg.pin, msg.value, msg.ts.tv_sec, msg.ts.tv_nsec);
+        printk(KERN_NOTICE "interrupt pin=%d value=%d time=%ld.%09ld\n", msg.pin, msg.value, msg.ts.tv_sec, msg.ts.tv_nsec);
     }
     
     return IRQ_HANDLED;
