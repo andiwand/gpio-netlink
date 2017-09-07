@@ -1,6 +1,12 @@
 # gpio-netlink
 Kernel module to notify gpio interrupts with netlink
 
+## Compilation
+```
+CCPREFIX=... KERNEL_SRC=... make
+```
+
+## Usage
 ```
 $ modinfo gpio-netlink.kofilename:       gpio-netlink.ko
 description:    sends gpio interrupts per netlink
